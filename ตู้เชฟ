@@ -1,0 +1,22 @@
+ login
+def login(username, password):
+    # ตรวจสอบการเข้าสู่ระบบ
+    if username == "admin" and password == "password":
+        return True
+    else:
+        return False
+
+# ตัวอย่างการใช้งาน
+username_input = input("กรุณากรอกชื่อผู้ใช้: ")
+password_input = input("กรุณากรอกรหัสผ่าน: ")
+
+if login(username_input, password_input):
+    print("เข้าสู่ระบบสำเร็จ")
+    # หน้าต่างเลือกดูรูปภาพ
+    print("1. เลือกรูปภาพ")
+    # หน้าต่างเลือกดูตัวหนังสือ
+    print("2. เลือกดูตัวหนังสือ")
+    # หน้าต่างเลือกรายชื่อ
+    print("3. เลือกรายชื่อ")
+else:
+    print("เข้าสู่ระบบไม่สำเร็จ")
