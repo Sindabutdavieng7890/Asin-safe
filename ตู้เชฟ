@@ -1,22 +1,53 @@
- login
-def login(username, password):
-    # ตรวจสอบการเข้าสู่ระบบ
-    if username == "admin" and password == "password":
-        return True
-    else:
-        return False
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Website</h1>
+    <nav>
+      <ul>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#posts">Posts</a></li>
+        <li><a href="#logout">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
 
-# ตัวอย่างการใช้งาน
-username_input = input("กรุณากรอกชื่อผู้ใช้: ")
-password_input = input("กรุณากรอกรหัสผ่าน: ")
+  <main>
+    <section id="login">
+      <h2>Login</h2>
+      <form action="login.php" method="POST">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </section>
 
-if login(username_input, password_input):
-    print("เข้าสู่ระบบสำเร็จ")
-    # หน้าต่างเลือกดูรูปภาพ
-    print("1. เลือกรูปภาพ")
-    # หน้าต่างเลือกดูตัวหนังสือ
-    print("2. เลือกดูตัวหนังสือ")
-    # หน้าต่างเลือกรายชื่อ
-    print("3. เลือกรายชื่อ")
-else:
-    print("เข้าสู่ระบบไม่สำเร็จ")
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <!-- ตำแหน่งสำหรับแสดงรูปภาพ -->
+    </section>
+
+    <section id="posts">
+      <h2>Posts</h2>
+      <!-- ตำแหน่งสำหรับแสดงโพสต์ -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>
